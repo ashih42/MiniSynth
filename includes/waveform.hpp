@@ -1,0 +1,12 @@
+#ifndef WAVEFORM_HPP
+# define WAVEFORM_HPP
+
+enum Waveform
+{
+	SINE_WAVE,
+	TRIANGLE_WAVE,
+	SQUARE_WAVE,
+	SAWTOOTH_WAVE
+};
+
+#endif
