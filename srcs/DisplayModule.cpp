@@ -45,7 +45,7 @@ SDL_Texture *		DisplayModule::_loadTexture(std::string filename)
 {
 	SDL_Texture *	texture = IMG_LoadTexture(this->_renderer,
 		ResourceManager::getInstance().getAbsolutePathname(filename).c_str());
-	if (texture == NULL)
+	if (texture == nullptr)
 		throw SDLException("Failed to load texture: " + filename);
 	return texture;
 }
@@ -90,6 +90,6 @@ void				DisplayModule::_render(void)
 {
 	SDL_SetRenderDrawColor(this->_renderer, 255, 255, 255, 0);
 	SDL_RenderClear(this->_renderer);
-	SDL_RenderCopy(this->_renderer, this->_currentWaveTexture, NULL, NULL);
+	SDL_RenderCopy(this->_renderer, this->_currentWaveTexture, nullptr, nullptr);
 	SDL_RenderPresent(this->_renderer);
 }

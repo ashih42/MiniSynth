@@ -6,7 +6,7 @@
 
 EventManager::EventManager(MiniSynth & miniSynth) : _miniSynth(miniSynth)
 {
-	if (!(this->_keyState = SDL_GetKeyboardState(NULL)))
+	if (!(this->_keyState = SDL_GetKeyboardState(nullptr)))
 		throw SDLException("SDL_GetKeyboardState() failed");
 }
 

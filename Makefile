@@ -20,14 +20,15 @@ INCLUDES := includes/
 HEADERS := -I $(INCLUDES) -I $(SDL2_INC) -I $(SDL2_IMAGE_INC) -I $(SDL2_TTF_INC)
 
 SRCSDIR := srcs/
-SRCS := main.cpp \
+SRCS := \
 AudioModule.cpp \
-MiniSynth.cpp \
-SDLException.cpp \
-ResourceManager.cpp \
 DisplayModule.cpp \
 EventManager.cpp \
-NoteManager.cpp
+MiniSynth.cpp \
+NoteManager.cpp \
+ResourceManager.cpp \
+SDLException.cpp \
+main.cpp
 
 OBJDIR := objs/
 OBJS := $(addprefix $(OBJDIR), $(SRCS:.cpp=.o))

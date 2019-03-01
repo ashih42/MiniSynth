@@ -7,7 +7,7 @@
 
 #define AMPLITUDE				(28000 / 16)
 #define SAMPLE_RATE				44100
-#define BUFFER_SIZE				(2048)
+#define BUFFER_SIZE				(4096 / 8)
 
 void				audioCallback(void * userdata, Uint8 * stream, int len)
 {
@@ -70,7 +70,7 @@ AudioModule::AudioModule(Waveform waveform) : _isPlayingSong(false), _sampleNumb
 	audioSettings.callback = &audioCallback;
 	audioSettings.userdata = this;
 
-	SDL_OpenAudio(&audioSettings, NULL);
+	SDL_OpenAudio(&audioSettings, nullptr);
 	if (audioSettings.format != AUDIO_S16SYS)
 		throw SDLException("audioSettings.format does not match");
 
