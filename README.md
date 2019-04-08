@@ -1,6 +1,6 @@
 # MiniSynth
 
-A minimalistic synthesizer in C++ using SDL Audio library.
+A simple sound synthesizer in C++ using [SDL2](https://www.libsdl.org/download-2.0.php).
 
 ## Prerequisites
 
